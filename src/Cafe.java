@@ -1,9 +1,5 @@
 public abstract class Cafe{
-    private String descripcion= "Cafe simple";
-
-    public Cafe(String descripcion){
-        this.descripcion = descripcion;
-    }
+    public String descripcion= "Cafe simple";
 
     public String getDescripcion(){
         return descripcion;
