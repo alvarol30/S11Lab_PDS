@@ -1,10 +1,18 @@
 public class Soya extends Cafe{
     private Cafe cafe;
-    public Soya(){
-        descripcion= "Cafe Soya";
+
+    public Soya(Cafe cafe){
+        this.cafe=cafe;
     }
+
     public double costo(){
-        return 0.15;
+        return cafe.costo()+0.15;
     }
+
+    public String getDescripcion(){
+        return cafe.getDescripcion()+" + Soya";
+    }
+
+
 
 }
