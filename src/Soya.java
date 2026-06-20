@@ -1,4 +1,4 @@
-public class Soya extends Cafe{
+public class Soya extends DecoratorComplemento{
     private Cafe cafe;
 
     public Soya(Cafe cafe){
