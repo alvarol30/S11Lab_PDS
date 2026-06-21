@@ -1,4 +1,8 @@
-public class Leche extends DecoratorComplemento{
+package complementos;
+
+import bebidas.Cafe;
+
+public class Leche extends DecoratorComplemento {
     Cafe cafe;
 
     public Leche(Cafe cafe){
@@ -10,6 +14,6 @@ public class Leche extends DecoratorComplemento{
     }
 
     public String getDescripcion(){
-        return cafe.getDescripcion()+" + Leche";
+        return cafe.getDescripcion()+" + complementos.Leche";
     }
 }

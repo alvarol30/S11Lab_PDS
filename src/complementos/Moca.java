@@ -1,4 +1,8 @@
-public class Moca extends DecoratorComplemento{
+package complementos;
+
+import bebidas.Cafe;
+
+public class Moca extends DecoratorComplemento {
     Cafe cafe;
 
     public Moca(Cafe cafe){
@@ -10,6 +14,6 @@ public class Moca extends DecoratorComplemento{
     }
 
     public String getDescripcion(){
-        return cafe.getDescripcion()+" + Moca";
+        return cafe.getDescripcion()+" + complementos.Moca";
     }
 }
