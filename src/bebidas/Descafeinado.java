@@ -1,10 +1,19 @@
 package bebidas;
 
-public class Descafeinado extends Cafe {
-    public Descafeinado(){
-        descripcion= "bebidas.Cafe bebidas.Descafeinado";
+ import java.util.HashMap;
+
+public class Descafeinado extends Cafe{
+    public Descafeinado(String tamano){
+        super(tamano);
+        descripcion= "Cafe Descafeinado";
+        this.TamanoDefault = tamano;
+        this.precios = new HashMap<String, Double>() {{
+            put("N", 1.05);
+            put("M", 1.15);
+            put("G", 1.25);
+        }};
     }
     public double costo(){
-        return 1.05;
+        return precios.get(TamanoDefault);
     }
 }
