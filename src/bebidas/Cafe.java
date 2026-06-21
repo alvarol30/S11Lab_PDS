@@ -5,7 +5,7 @@ import java.util.HashMap;
 public abstract class Cafe{
     public String descripcion= "Cafe simple";
 
-    public HashMap<String, Double> tamano= new HashMap<String, Double>(){{
+    public HashMap<String, Double> precios= new HashMap<String, Double>(){{
         put("N", 0.0);
         put("M", 0.0);
         put("G", 0.0);
