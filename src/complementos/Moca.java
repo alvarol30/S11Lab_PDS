@@ -1,19 +1,26 @@
 package complementos;
 
 import bebidas.Cafe;
+import java.util.HashMap;
 
 public class Moca extends DecoratorComplemento {
-    Cafe cafe;
 
     public Moca(Cafe cafe){
-        this.cafe=cafe;
+        super(cafe);
+        precios = new HashMap<String, Double>() {{
+            put("N", 0.20);
+            put("M", 0.25);
+            put("G", 0.30);
+        }};
     }
 
+    @Override
     public double costo(){
-        return cafe.costo()+0.20;
+        return cafe.costo() + precios.get(TamanoDefault);
     }
 
+    @Override
     public String getDescripcion(){
-        return cafe.getDescripcion()+" + complementos.Moca";
+        return cafe.getDescripcion() + " + Moca";
     }
 }
